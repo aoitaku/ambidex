@@ -14,7 +14,7 @@ module Ambidex
 
     class Instance
 
-      attr_accessor :width, :height, :bgcolor, :antialias, :transparent
+      attr_accessor :width, :height, :bgcolor, :antialias, :transparent, :view_id
 
       def initialize
         @width = 640
