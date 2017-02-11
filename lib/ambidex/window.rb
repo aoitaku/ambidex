@@ -8,8 +8,15 @@ module Ambidex
   module Window
 
     module ScaleMode
-      NEAREST_NEIGHBOR = Native(`PIXI.SCALE_MODES.NEAREST`)
-      BILINEAR = Native(`PIXI.SCALE_MODES.LINEAR`)
+
+      def nearest_neighbor
+        Native(`PIXI.SCALE_MODES.NEAREST`)
+      end
+
+      def bilinear
+        Native(`PIXI.SCALE_MODES.LINEAR`)
+      end
+
     end
 
     class Instance
