@@ -1,7 +1,6 @@
 require 'forwardable'
 require 'opal-pixi'
 
-require_relative 'pixi/ticker'
 require_relative 'input'
 
 module Ambidex
@@ -73,7 +72,7 @@ module Ambidex
 
       def loop(&block)
         instance.create
-        PIXI.shared_ticker.add(-> delta_time {
+        PIXI.ticker.shared.add(-> delta_time {
           Input.update
           block.call(delta_time)
         }, self)
