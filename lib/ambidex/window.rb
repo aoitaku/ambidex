@@ -9,11 +9,11 @@ module Ambidex
 
     module ScaleMode
 
-      def nearest_neighbor
+      def self.nearest_neighbor
         Native(`PIXI.SCALE_MODES.NEAREST`)
       end
 
-      def bilinear
+      def self.bilinear
         Native(`PIXI.SCALE_MODES.LINEAR`)
       end
 
